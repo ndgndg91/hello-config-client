@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: HELLO-CONFIG-CLIENT
+  profiles:
+    active: ${ACTIVE_PROFILE}
+  config:
+    import: configserver:http://localhost:8888
+  cloud:
+    config:
+      enabled: true
+      profile: ${ACTIVE_PROFILE}
